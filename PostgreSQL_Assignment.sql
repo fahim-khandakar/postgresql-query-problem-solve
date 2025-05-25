@@ -114,3 +114,12 @@ SELECT
     ELSE 'Evening'
   END AS time_of_day
 FROM sightings;
+
+
+-- Problem 9
+DELETE FROM rangers
+WHERE NOT EXISTS (
+  SELECT 1
+  FROM sightings
+  WHERE sightings.ranger_id = rangers.ranger_id
+);
