@@ -27,5 +27,5 @@ CHAR ডেটা টাইপে, যদি আমরা কম অক্ষর
 ## Explain the purpose of the WHERE clause in a SELECT statement.
 
 WHERE ক্লজ ব্যবহার করে আমরা ডেটাবেসকে নির্দিষ্ট করে বলতে পারি কোন কোন ডেটা আমাদের দরকার আর কোনটা না। এটি মূলত একটি শর্ত (condition) যেটি SELECT স্টেটমেন্টের সাথে যুক্ত হয়। যেমন:
-SELECT \* FROM students
+SELECT student_name, student_age FROM students
 WHERE student_age >= 18;
