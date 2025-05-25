@@ -103,3 +103,14 @@ LIMIT 2
 UPDATE species
 SET conservation_status = 'Historic'
 WHERE discovery_date < '1800-01-01';
+
+
+-- Problem 8
+SELECT
+  sighting_id,
+  CASE
+    WHEN CAST(sighting_time AS time) <= '12:00:00' THEN 'Morning'
+    WHEN CAST(sighting_time AS time) > '12:00:00' AND CAST(sighting_time AS time) < '17:00:00' THEN 'Afternoon'
+    ELSE 'Evening'
+  END AS time_of_day
+FROM sightings;
